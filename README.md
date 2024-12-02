@@ -1,11 +1,31 @@
-# Proposed Solution Aims
-To revamp the Asia Miles experience with a focus on simplicity, personalization, and accessibility, aiming to boost engagement and mileage redemption across a diverse user base, thus fostering increased loyalty to the Asia Miles program
+# Asia Miles Experience Revamp
 
-# Disclaimer
-- All data used in this project are sourced from Kaggle. If there are any concerns regarding the data sources or usage, please contact us immediately for resolution. This project is for demonstration purpose only.
+## Proposed Solution Aims
+The goal of this project is to revamp the Asia Miles experience by emphasizing:
+- **Simplicity**: Streamlining user interactions to make the platform intuitive and easy to navigate.  
+- **Personalization**: Delivering tailored recommendations and insights to enhance user satisfaction.  
+- **Accessibility**: Ensuring the platform is user-friendly across a diverse range of demographics and devices.  
 
-# To test and review this developed web application, please replace the api base and api key in function: settingAPIgpt35() of openairelated.py
-- openai.api_base = ""
-- openai.api_key = "" 
+By achieving these aims, we seek to boost user engagement and mileage redemption rates, ultimately fostering greater loyalty to the Asia Miles program.
 
-After setting up the openai base and key, run [python app.py] in the terminal, and you may start exploring the developed solution.
+---
+
+## Features
+- **Enhanced User Interface**: A sleek and modern design focused on usability and clarity.  
+- **Personalized Recommendations**: AI-driven suggestions based on user preferences and behavior.  
+- **Accessibility Improvements**: Inclusive design principles to ensure usability for all users.  
+- **Seamless Integration**: Easily integrates with existing Asia Miles services and third-party APIs.
+
+---
+
+## How to Use
+1. **Configure OpenAI API**:  
+   Update the `settingAPIgpt35()` function in `openairelated.py` with your OpenAI API details:
+   ```python
+   openai.api_base = "your_api_base"
+   openai.api_key = "your_api_key"
+2. **Run the application to explore the new features**:
+   python app.py
+
+
+Feel free to access the developed web application through your browser and experience the revamped Asia Miles interface.
