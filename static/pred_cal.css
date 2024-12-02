@@ -1,0 +1,281 @@
+#headers{
+    text-align: center;
+}
+
+/* styles.css */
+#topbar {
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    height: 40px;
+}
+
+
+/* Style for the spacer element */
+.spacer {
+    flex-grow: 1;
+}
+  
+/* Additional styling for the right side elements */
+.user-info {
+    display: flex; /* Align elements horizontally within their container */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: flex-end; /* Right-align elements within their container */
+    margin-left: 10px; /* Add additional spacing if needed */
+    position: relative;
+}
+
+/* Initial styling for the hover-info */
+.hover-info {
+    display: none; /* Initially hidden */
+    background-color: #333; /* Background color for the additional info */
+    color: white;
+    padding: 10px;
+    position: absolute;
+    right: 0;
+    top: 100%; /* Position it below the username */
+    z-index: 1; /* Ensure it appears above other content */
+}
+
+/* Hover effect to show the additional info */
+.user-info:hover .hover-info {
+    display: block;
+}
+
+.user-info:hover .hover-info>*{
+    display: inline;
+}
+  
+
+#currentside, #targetside{
+    background-color: white;
+    text-align: center;
+}
+#currentside>*, #targetside>*{
+    display: inline;
+}
+
+.progress-container {
+    width: 100%;
+    text-align: center;
+    background-color: #2d2d2d;
+}
+
+/* styles.css */
+.progress-bar {
+    width: 0%;
+    background-color: #BBAD8C;
+    display: flex;
+    justify-content: center;
+    height: 40px; /* Set the same height for both elements */
+    align-items: center;
+    transition: width 0.5s ease;
+}
+
+#per {
+    color: black; /* Set text color for the percentage */
+}
+
+button {
+    margin-top: 20px;
+}
+
+
+
+/*Code Reuse From Previous Pj*/
+#container{
+    width: 100%;
+    display: flex;
+    column-gap: 0.5%;
+}
+
+#menu_content{
+    width: 70%;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 8px;
+    height: 400px;
+    overflow: auto;
+}
+
+    #menu_content>div>h5 {
+        float: left;
+        width: 50%;
+        text-align: center;
+        background-color: lightgrey;
+        outline: 1px outset #000000;           
+        outline-offset: 0px;
+        border-radius: 4px 4px 0 0;
+        cursor: pointer;
+    }
+    #menu_content>div>h5:hover{
+        background-color: darkgray;
+    }
+
+    #canredm:hover{
+        background-color: darkgray;
+    }
+
+    #opt_daily>div>h5{
+        float: left;
+        width: 20%;
+        text-align: center;
+        background-color: lightgrey;
+        outline: 1px outset #000000;           
+        outline-offset: 0px;
+        border-radius: 4px 4px 0 0;
+        cursor: pointer;
+    }
+    #opt_daily>div>h5:hover{
+        background-color: darkgray;
+    }
+
+
+    #table0{
+        background-color: white;
+        border: 3px solid black;
+        -webkit-border-radius: 15px;
+        border-radius: 8px;
+        width: 30%;
+        height: 400px;
+        overflow: auto;
+        float: right;
+    }
+
+        #table0 > h2,h4{
+            text-align: center;
+        }
+
+        table{
+            width: 100%;
+            border: 1px solid lightgray;
+        }
+        /*Table Header */
+        thead{
+            text-align: right;
+            background-color: gainsboro;
+            border: 1px solid white;
+            width: auto;
+        }
+        .description{
+            text-align: left;
+        }
+
+        /*Table Body*/
+        tbody{
+            text-align: right;
+            border: 1px solid white;
+            width: auto;        
+        }
+        
+        /*Table Footer*/
+        tfoot{
+            background-color: gainsboro;
+            border: 1px solid white;        
+        }
+        
+        #totalqty{
+            text-align: right;
+            width: auto;
+        }
+
+#redaward{
+    width: 100%;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 8px;
+    height: auto;
+    overflow: auto;
+}
+#redaward>h5 {
+    width: 100%;
+    text-align: center;
+    background-color: lightgrey;
+    outline: 1px outset #000000;           
+    outline-offset: 0px;
+    border-radius: 4px 4px 0 0;
+}
+
+.but{
+    width: 28%;
+    height: 200px;
+    margin: 2%;
+    outline: 1px solid black;
+    text-align: center;
+    justify-content: center;
+    -webkit-box-shadow: 0px 5px 12px 2px rgba(0,0,0,0.52); 
+    box-shadow: 0px 5px 12px 2px rgba(0,0,0,0.52);
+    cursor: pointer;
+
+}
+
+.but:hover{
+    -webkit-box-shadow: 0px 5px 13px 7px rgba(0,0,0,0.86); 
+    box-shadow: 0px 5px 13px 7px rgba(0,0,0,0.86);
+    background-color: rgb(24, 137, 145);
+    color: white;
+}
+
+.but{
+    float: left;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 999; /* Higher z-index to cover everything */
+    pointer-events: auto; /* Enable pointer events on the overlay */
+}
+
+.popup-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    z-index: 1000;
+    width: 300px;
+}
+
+.popup-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    z-index: 1000;
+    width: 300px;
+}
+
+.popup-container p {
+    font-size: 18px;
+    margin: 0 0 20px;
+}
+
+.popup-container button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    background-color: #4D6AFF;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.popup-container button:hover {
+    background-color: #365DC3;
+}

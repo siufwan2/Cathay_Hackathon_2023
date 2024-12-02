@@ -1,0 +1,32 @@
+body {
+    background-image: url("bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0; /* Remove default margin to use full viewport width */
+    font-family: Arial, sans-serif; /* Define a fallback font family */
+  }
+
+#container_navbar{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    background-color: #005D63;
+
+}
+
+#container_navbar > *{
+    display: inline;
+    color: white;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+
+a:link,
+a:visited {
+  color: inherit; /* Inherit the color from the parent element */
+  text-decoration: none; /* Remove the underline */
+}
+a:hover{
+    color: black;
+}

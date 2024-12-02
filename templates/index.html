@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cathay Prototype: Main Page</title>
+    <link rel="stylesheet" href="../static/main.css">
+    <link rel="stylesheet" href="../static/index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div id="container_navbar">
+        <h4><a href="./index.html">Home</a></h4>
+        <h4><a href="./AI.html">Your AI Assistant</a></h4>
+    </div>
+    <br>
+    <div id="container">
+        <div id="info-panel">
+            <h1>Welcome to the Portal</h1>
+        </div>
+        <div id="grid1">
+            <div id="weather">
+                
+            </div>            
+            <div id="fgtinfo">
+                
+            </div>                       
+            <div id="milesbal">
+                
+            </div>
+        </div>
+
+        <div id="grid2">
+            <div class="cell">
+                <h2>Miles Earning Tracking</h2>
+                <canvas id="barChart"></canvas>
+            </div>
+            <div class="cell">
+                <h2>Your Experience With Cathay</h2>
+                <canvas id="pieChart"></canvas>
+            </div>              
+            <div class="cell">
+                <h2>Your Miles Earning Journey</h2>
+                <canvas id="lineChart"></canvas>
+            </div>
+            <div class="cell" id="finfo">
+                <h2 id="ctime">Current Time: </h2>
+                <table id="flightinfopanel">
+                    <tr>
+                        <th>Flight Number</th>
+                        <th>Departure</th>
+                        <th>Destination</th>
+                        <th>Departure Time</th>
+                        <th>Arrival Time</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <script>
+        function updateCurrentTime() {
+            const currentTimeElement = document.getElementById('ctime');
+            const currentTime = getCurrentTime();
+            currentTimeElement.textContent = 'Current Time (HKG) - ' + currentTime;
+        }
+
+        function getCurrentTime() {
+            const now = new Date();
+            const hours = now.getHours();
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+            const ampm = hours >= 12 ? 'PM' : 'AM';
+            const displayHours = hours % 12 || 12; // Convert 0 to 12 in AM/PM format
+
+            const timeString = `${displayHours.toString().padStart(2, '0')}:${minutes}:${seconds} ${ampm}`;
+
+            return timeString;
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            updateCurrentTime(); // Call it once on page load
+            setInterval(updateCurrentTime, 1000); // Update every second (1000 milliseconds)
+        });
+
+
+        function getRandomTime() {
+                const hours = Math.floor(Math.random() * 12);
+                const minutes = Math.floor(Math.random() * 60);
+                const ampm = Math.random() < 0.5 ? 'AM' : 'PM';
+                return `${hours}:${minutes.toString().padStart(2, '0')} ${ampm}`;
+            }
+
+            // Generate and add random flight information rows
+            for (let i = 0; i < 5; i++) {
+                const flightNumber = 'CX' + Math.floor(Math.random() * 1000);
+                const cities = ['Hong Kong (HKG)', 'New York (JFK)', 'Los Angeles (LAX)', 'Tokyo (NRT)', 'London (LHR)'];
+                const departureCity = cities[Math.floor(Math.random() * cities.length)];
+                let destinationCity;
+                do {
+                    destinationCity = cities[Math.floor(Math.random() * cities.length)];
+                } while (destinationCity === departureCity);
+                const departureTime = getRandomTime();
+                const arrivalTime = getRandomTime();
+                const newRow = document.getElementById('flightinfopanel').insertRow(-1);
+                newRow.innerHTML = `<td>${flightNumber}</td><td>${departureCity}</td><td>${destinationCity}</td><td>${departureTime}</td><td>${arrivalTime}</td>`;
+            }
+
+
+        var flightinfo = document.getElementById('fgtinfo');
+        var weather = document.getElementById('weather');
+        var milebal = document.getElementById('milesbal');
+
+        var randomInteger = Math.floor(Math.random() * 3);
+        
+        var wlst = ["Sunny🌞", "Cloudy☁️", "Rainy🌧️"];
+        // Define the background gradients for each weather condition
+        var weatherText = wlst[randomInteger];
+
+        // Define the background gradients for each weather condition
+        var sunnyGradient = 'linear-gradient(to right, rgba(255, 220, 38, 0.9), rgba(252, 234, 24, 0.9), rgba(241, 196, 15, 0.9))';
+        var cloudyGradient = 'linear-gradient(to right, rgba(192, 192, 192, 0.9), rgba(128, 128, 128, 0.9), rgba(192, 192, 192, 0.9))';
+        var rainyGradient = 'linear-gradient(to right, rgba(0, 0, 128, 0.9), rgba(0, 0, 255, 0.9), rgba(0, 0, 128, 0.9))';
+
+        var backgroundGradient = '';
+
+        // Determine the background gradient based on the weather condition
+        if (weatherText.includes("Sunny")) {
+        backgroundGradient = sunnyGradient;
+        } else if (weatherText.includes("Cloudy")) {
+        backgroundGradient = cloudyGradient;
+        } else if (weatherText.includes("Rainy")) {
+        backgroundGradient = rainyGradient;
+        }
+
+        // Set the background gradient
+        weather.style.background = backgroundGradient;
+
+        // Create a new element and set its content
+        var weatherElement = document.createElement('h3');
+        weatherElement.innerHTML = "Today's Weather:<br>" + weatherText;
+        // Append the new element to the 'weather' div
+        weather.appendChild(weatherElement);
+        
+        var flst = [
+            "Flight CX123 from New York (JFK) to Hong Kong (HKG)",
+            "Flight CX456 from London (LHR) to Tokyo (NRT)",
+            "Flight CX789 from Los Angeles (LAX) to Sydney (SYD)"
+            ];
+
+        
+        flightinfo.innerHTML = "<h3> Your Trip:<br> " +flst[randomInteger] +"</h3>";
+
+        var mile = Math.floor(Math.random() * 10000);
+        milebal.innerHTML = "<h3> Miles balance:<br> $"+ mile +"</h3>"
+        
+        // Sample data for charts
+        var barChartData = {
+            labels: ['Flight', 'Accommodation', 'Meals', 'Transportation', 'Entertainment'],
+            datasets: [{
+                label: 'Highest Miles Earned',
+                data: [1000, 600, 250, 300, 150],
+                backgroundColor: ['blue', 'green', 'orange', 'red', 'purple']
+            }]
+        };
+
+        //
+        var monthlbl = [];
+        var today = new Date();
+        var currentYear = today.getFullYear();
+        var currentMonth = today.getMonth();
+        
+        for (var i = 0; i < 12; i++) {
+            var year = currentYear;
+            var month = (currentMonth - i + 12) % 12 + 1; // Adjust for 0-based month
+            monthlbl.push(year + '/' + (month < 10 ? '0' : '') + month);
+        }
+
+        var miledata = [mile/2];
+        for (var i = currentMonth - 11; i <= currentMonth; i++) {
+            if (i == currentMonth) {
+                // Set the last item in miledata to the current month's miles
+                miledata[miledata.length - 1] = mile;
+            } 
+            else {
+                // Generate a randomly reasonable increase in miles earned for previous months, with reasonable up/down
+                var prevMiles = miledata[miledata.length - 1];
+                var minChange = -prevMiles; // Maximum decrease is the current miles earned
+                var maxChange = 1000; // Maximum increase
+                var miles = prevMiles + Math.floor(Math.random() * (maxChange - minChange + 1)) + minChange;
+                miledata.push(Math.max(miles, 0)); // Ensure the miles earned is non-negative
+            }
+        }
+        var lineChartData = {
+            labels: monthlbl,
+            datasets: [{
+                label: 'Miles Balance Overtime',
+                data: miledata,
+                borderColor: 'orange',
+                borderWidth: 2,
+                fill: false
+            }]
+        };
+        
+
+        var Satisfiedata = [];
+        for (var i = 0; i < 5; i++) {
+            Satisfiedata.push(Math.floor(Math.random() * 100) + 1); // Generate random values between 1 and 100
+        }
+        var pieChartData = {
+            labels: ['Very Satisfied', 'Satisfied', 'Neutral', 'Dissatisfied', 'Very Dissatisfied'],
+            datasets: [{
+                data: Satisfiedata,
+                backgroundColor: ['green', 'lime', 'yellow', 'orange', 'red']
+            }]
+        };
+
+        // Create charts
+        var barChartCtx = document.getElementById('barChart').getContext('2d');
+        var lineChartCtx = document.getElementById('lineChart').getContext('2d');
+        var pieChartCtx = document.getElementById('pieChart').getContext('2d');
+
+        new Chart(pieChartCtx, {
+            type: 'doughnut',
+            data: pieChartData,
+            options: {
+                // Chart options and customization for the pie chart
+                responsive: true
+            }
+        });
+
+        new Chart(barChartCtx, {
+            type: 'bar',
+            data: barChartData,
+            options: {
+                // Chart options and customization for the bar chart
+                responsive: true
+            }
+        });
+
+        new Chart(lineChartCtx, {
+            type: 'line',
+            data: lineChartData,
+            options: {
+                // Chart options and customization for the line chart
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Miles Earned'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Y/M'
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

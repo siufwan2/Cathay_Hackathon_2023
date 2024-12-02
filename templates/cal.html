@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cathay Prototype: Miles Calculator</title>
+    <!--Progress Bar Process From W3School-->
+    <link rel="stylesheet" href="../static/main.css">
+    <link rel="stylesheet" href="../static/pred_cal.css">
+    
+</head>
+
+<body>
+    <div id="container_navbar">
+        <h4><a href="./index.html">Home</a></h4>
+        <h4><a href="./AI.html">Your AI Assistant</a></h4>   
+        <div class="spacer"></div> <!-- Spacer element for alignment -->
+        <div class="user-info">
+            <div class="username">
+                <h6 id="uname"></h6>
+            </div>
+            <div class="hover-info">    
+                <h5>UserCode:</h5>
+                <h6 id="uid"></h6>
+                <br><br>
+
+                <h5>Company:</h5>
+                <h6 id="ucomp"></h6>
+                <br><br>
+
+                <h5>Location:</h5>
+                <h6 id="uloc"></h6>
+                <br><br>
+
+                <h5>Miles Bal:</h5>
+                <h6 id="mbal"></h6>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div id="topbar">
+        <div id="currentside">Current<img src="../static/mileslg.png" width=15px>: <p id="cside">1000</p></div>
+        <div class="progress-container">
+            <div class="progress-bar"><span id="per"></span></div>      
+        </div>    
+        <div id="targetside">Target<img src="../static/mileslg.png" width=15px>: <p id="tside">1000</p></div>        
+    </div>
+
+    <br>
+    <br>
+    
+    <div id="container">
+        <div id="menu_content">
+            <h1>Happy Planning!</h1>
+            <div>
+                <h5 id="h_over4000" onclick="p_bigreward();">Earn Over <img src="../static/mileslg.png" width=10px> 4000</h5>
+                <h5 id="h_daily" onclick="p_dailymoment();">Earn <img src="../static/mileslg.png" width=10px> In Your daily moment</h5>
+            </div>
+            <br>
+            <br>
+            <div id="opt_over4000">
+            </div>
+            <div id="opt_daily">
+                <div>
+                    <h5 id="h_daily_travel" onclick="p_daily_travel();">Travel</h5>
+                    <h5 id="h_daily_dining" onclick="p_daily_dining();">Dining</h5>
+                    <h5 id="h_daily_wellness" onclick="p_daily_wellness();">Wellness</h5>
+                    <h5 id="h_daily_shopping" onclick="p_daily_shopping();">Shopping</h5>
+                    <h5 id="h_daily_payment" onclick="p_daily_payment();">Payment</h5>
+                </div>
+
+                <div id="d_daily_travel">                
+                    <br><br><br>
+                </div>
+                <div id="d_daily_dining">
+                    <br><br><br>
+                </div>
+                <div id="d_daily_wellness">
+                    <br><br><br>
+                </div>
+                <div id="d_daily_shopping">
+                    <br><br><br>
+                </div>
+                <div id="d_daily_payment">
+                    <br><br><br>
+                </div>
+            </div>
+        </div>
+
+        <div id="table0">
+            <h2>Items Selected</h2>
+            <table>
+            <thead>
+                <tr>
+                <th class="description">Description</th>
+                <th class="quantity">Miles</th>
+                </tr>
+            </thead>
+    
+            <tbody id="tablebody">
+            </tbody>
+    
+            <tfoot>
+                <tr>
+                <td class="description" id="total">Total Miles Earned</td>
+                <td class="quantity" id="totalqty">0</td>
+                </tr>
+            </tfoot>
+            </table>
+            
+        </div>
+    </div>
+    <br>
+    <div id="redaward">
+        <h2>Here are the awards you can redeem:</h2>
+        <h1>Happy Exploring!</h1>
+        <h5 id="canredm" onclick="other();">Award you can redeem now</h5>
+    </div>
+    <div class="overlay" id="overlay"></div>
+</body>
+
+<script src="../static/pred_cal.js"></script>

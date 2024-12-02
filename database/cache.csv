@@ -1,0 +1,76 @@
+code,cloc,company,name,gender,age,miles,target
+1080,Rio de Janeiro (RJ),Acme Factory,Ramon Shoji,male,53,10731,18000.0
+1271,Florianopolis (SC),Umbrella LTDA,Jessica Hoskins,female,61,10335,16000.0
+187,Campo Grande (MS),4You,Merle Gravatt,male,59,17088,10000.0
+327,Aracaju (SE),4You,Vanessa Nobles,female,32,13421,18000.0
+856,Brasilia (DF),Wonka Company,Jake Rollo,male,60,16475,18000.0
+110,Campo Grande (MS),4You,Frank Leung,none,54,2231,10000.0
+883,,Wonka Company,Laura Webb,female,46,5095,
+1009,,Acme Factory,Neil Tortora,none,38,13534,
+1101,,Acme Factory,Kristin Gaiser,female,58,13798,
+773,,Wonka Company,Edna Clyne,female,56,4276,
+1102,,Acme Factory,Beverly Porter,none,27,1665,
+24,,4You,Calvin Cuellar,male,60,593,
+917,,Acme Factory,Claude Ramos,male,46,5745,
+1158,,Umbrella LTDA,Kristyn Vincent,female,39,10571,
+409,,4You,Frank Strawn,none,32,6975,
+237,Salvador (BH),4You,Sylvia Etheridge,female,47,11176,10000.0
+955,Brasilia (DF),Acme Factory,Tad Corry,male,27,8115,16000.0
+1291,,Umbrella LTDA,Bonnie Miller,female,56,10723,
+574,Natal (RN),Monsters CYA,Della Gomez,none,52,8584,18000.0
+976,Campo Grande (MS),Acme Factory,Maria Peterson,female,62,2275,18000.0
+53,,4You,Carol Dixon,female,23,5207,
+1070,,Acme Factory,Darren Rice,male,26,309,
+1153,,Umbrella LTDA,Joyce Holsten,female,42,8311,
+571,Aracaju (SE),Monsters CYA,Nathan Ponder,male,43,17347,16000.0
+741,Campo Grande (MS),Wonka Company,Brian Trujillo,none,65,3432,18000.0
+1200,,Umbrella LTDA,Alicia Gilchrist,female,62,7982,
+415,,4You,Barbara Oliver,none,61,14889,
+1249,,Umbrella LTDA,Eleanor Washington,female,42,4372,
+776,,Wonka Company,Sharon Fontenot,female,48,9120,
+786,,Wonka Company,Krista Vandyke,female,29,12214,
+160,,4You,Juan Stevenson,none,43,12011,
+174,Florianopolis (SC),4You,Christopher Brown,none,59,9182,16000.0
+509,,Monsters CYA,Brian Thompson,none,21,2596,
+1029,Recife (PE),Acme Factory,Steven Carlisle,male,43,210,16000.0
+768,,Wonka Company,Antonio Sanchez,none,64,16091,
+250,,4You,Jeff Veno,male,38,2422,
+577,,Monsters CYA,Paul Emery,none,63,9595,
+192,,4You,Jordan Williams,male,41,13574,
+1303,,Umbrella LTDA,Douglas Kreider,male,59,12031,
+738,,Wonka Company,Luciano Harris,male,58,10471,
+588,,Monsters CYA,Mary Parnell,none,53,5526,
+1120,,Acme Factory,Josephine Underwood,female,56,14052,
+791,Recife (PE),Wonka Company,Donald Hysmith,male,50,17445,18000.0
+387,,4You,Dorothy Barnes,none,21,9807,
+299,,4You,Robert Herrera,none,28,12490,
+779,Recife (PE),Wonka Company,Matthew Freeman,none,45,3806,16000.0
+476,Brasilia (DF),Monsters CYA,Major Girard,male,31,8416,18000.0
+970,,Acme Factory,Juan Flood,male,35,14384,
+1304,,Umbrella LTDA,Daniel Chobot,male,57,4988,
+640,,Monsters CYA,Thomas Lockman,none,26,4407,
+57,,4You,Dorothy Dyson,female,32,3429,
+761,,Wonka Company,Ralph Paquin,male,31,14806,
+207,,4You,Mary Breton,female,33,13281,
+1046,,Acme Factory,John Millner,none,49,3087,
+625,,Monsters CYA,Elizabeth Srinvasan,female,61,10447,
+284,,4You,Adam Pittman,male,32,17360,
+1319,,Umbrella LTDA,Grace Walling,none,51,6729,
+733,,Wonka Company,Jesus Victor,none,30,8869,
+680,,Wonka Company,Bret Dowell,none,52,3569,
+650,,Wonka Company,Barbara Evers,none,64,14641,
+1110,,Acme Factory,Amy Thomas,none,27,5600,
+629,,Monsters CYA,William Robinson,none,26,17462,
+964,,Acme Factory,Ernest Bybee,male,62,17829,
+345,,4You,Timothy Perez,none,46,5171,
+700,,Wonka Company,John Mcvey,male,28,12460,
+1323,,Umbrella LTDA,Helen Warner,female,24,7681,
+34,,4You,Anita Petersen,female,21,16335,
+575,,Monsters CYA,Lucy Pagel,female,42,13079,
+956,,Acme Factory,Clarence Gracely,male,51,8569,
+873,Natal (RN),Wonka Company,William Lindsey,male,27,129,18000.0
+255,,4You,Arthur Hoag,male,31,12254,
+947,,Acme Factory,Beth Bloodsaw,female,43,6941,
+666,Rio de Janeiro (RJ),Wonka Company,Ronald Barrett,male,22,3347,16000.0
+190,,4You,Jack Neumann,none,60,8370,
+1104,Florianopolis (SC),Acme Factory,Juanita Palmer,none,42,3714,16000.0

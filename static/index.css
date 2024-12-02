@@ -1,0 +1,73 @@
+h1{
+  text-align: center;
+  color: #FFFFFF;
+}
+
+h2{
+  text-align: center;
+}
+
+#grid1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#weather {
+  margin: 2%;
+  text-align: center;
+  color: #FFFFFF;
+  background: linear-gradient(to right, rgba(255, 220, 38, 0.9), rgba(252, 234, 24, 0.9), rgba(241, 196, 15, 0.9)); /* Transparent Yellow gradient */
+}
+
+#fgtinfo {
+  margin: 2%;
+  text-align: center;
+  color: #FFFFFF;
+  background: linear-gradient(to right, rgba(155, 89, 182, 0.9), rgba(151, 115, 177, 0.9), rgba(142, 68, 173, 0.9)); /* Transparent Purple gradient */
+}
+
+#milesbal {
+  margin: 2%;
+  text-align: center;
+  color: #FFFFFF;
+  background: linear-gradient(to right, rgba(46, 204, 113, 0.9), rgba(47, 175, 103, 0.9), rgba(39, 174, 96, 0.9)); /* Transparent Green gradient */
+}
+
+
+#grid2 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+}
+
+#grid2  > .cell {
+  background-color: rgba(216, 244, 253, 0.95); /* Semi-transparent gray */
+  margin: 2%;
+}
+
+#finfo{
+  overflow: scroll;
+}
+
+table {
+  border-collapse: collapse;
+  background-color: #f0f0f0; /* Set the background color for the table */
+  width: 80%;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #2d4560;
+  color: #fff; /* Set the text color for the table header */
+}
+
+/* Set the text color for table data cells */
+td {
+  background-color: #9cb4cf;
+  color: #333;
+}
